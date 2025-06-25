@@ -1,8 +1,8 @@
-# Advanced Image Recommender System Tutorial 🎯
+# Advanced Image Recommender System
 
 A comprehensive PyTorch implementation of a sophisticated hybrid image recommendation system that combines content-based filtering, collaborative filtering, and advanced deep learning techniques.
 
-## 🌟 Features
+## Features
 
 ### Core Components
 - **Hybrid Architecture**: Combines content-based and collaborative filtering
@@ -24,7 +24,7 @@ A comprehensive PyTorch implementation of a sophisticated hybrid image recommend
 - Feature importance analysis
 - Recommendation diversity metrics
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -39,18 +39,12 @@ pip install -r requirements.txt
 
 ### Basic Usage
 
-```python
-# Run the complete tutorial
-python image_recommender_tutorial.py
-
-# Run advanced components demo
-python advanced_components.py
-
-# Quick start with minimal data
-python quick_start.py
+```bash
+# Run the main recommender system
+python main.py
 ```
 
-## 📊 Architecture Overview
+## Architecture Overview
 
 ```
 Input: User ID + Item ID + Image
@@ -84,7 +78,7 @@ Input: User ID + Item ID + Image
                  Final Rating Prediction
 ```
 
-## 🔧 Configuration
+## Configuration
 
 Key parameters can be configured in the `Config` class:
 
@@ -105,7 +99,7 @@ class Config:
     EARLY_STOPPING_PATIENCE = 10
 ```
 
-## 📈 Training Process
+## Training Process
 
 The training pipeline includes:
 
@@ -121,7 +115,7 @@ The training pipeline includes:
 - **MAE**: Mean Absolute Error
 - **Correlation**: Pearson correlation between predicted and actual ratings
 
-## 🧠 Advanced Components
+## Advanced Components
 
 ### Graph Neural Networks
 ```python
@@ -147,7 +141,7 @@ multi_task_model = MultiTaskRecommender(base_model, num_categories=10)
 outputs = multi_task_model(user_ids, item_ids, images)
 ```
 
-## 📊 Evaluation Results
+## Evaluation Results
 
 Example performance metrics:
 
@@ -157,7 +151,7 @@ Example performance metrics:
 | MAE | 0.671 |
 | Correlation | 0.734 |
 
-## 🎨 Visualization
+## Visualization
 
 The tutorial includes comprehensive visualization:
 
@@ -166,7 +160,7 @@ The tutorial includes comprehensive visualization:
 - Attention weight visualization
 - Recommendation explanation plots
 
-## 🔍 Explainable AI
+## Explainable AI
 
 The system provides explanations for recommendations:
 
@@ -178,27 +172,30 @@ importance = explainer.compute_gradient_importance(user_ids, item_ids, images)
 explainer.visualize_explanations(user_id, item_id, image, importance)
 ```
 
-## 📚 Tutorial Structure
+## Project Structure
 
-1. **Basic Tutorial** (`image_recommender_tutorial.py`):
+1. **Core System** (`main.py`):
    - Complete hybrid recommender implementation
    - Synthetic data generation
    - Training and evaluation pipeline
-   - Visualization and analysis
+   - Model persistence and loading
 
-2. **Advanced Components** (`advanced_components.py`):
-   - Graph Neural Networks
-   - Contrastive Learning
-   - Multi-task Learning
-   - Ensemble Methods
-   - Explainable AI
+2. **Configuration** (`config.py`):
+   - Centralized configuration management
+   - Model hyperparameters
+   - Training settings
 
-3. **Quick Start** (`quick_start.py`):
-   - Minimal working example
-   - Pre-trained model usage
-   - Fast inference pipeline
+3. **Data Generation** (`data_generator.py`):
+   - Synthetic dataset creation
+   - Realistic user-item interaction patterns
+   - Image generation based on item characteristics
 
-## 🎯 Use Cases
+4. **Models** (`collaborative_filtering.py`, `image_features.py`):
+   - Matrix factorization implementation
+   - CNN feature extraction
+   - Neural network architectures
+
+## Use Cases
 
 This tutorial is perfect for:
 
@@ -207,7 +204,7 @@ This tutorial is perfect for:
 - **Production**: Adapting components for real-world systems
 - **Education**: Teaching advanced deep learning concepts
 
-## 🔧 Customization
+## Customization
 
 ### Adding New Models
 ```python
@@ -235,14 +232,14 @@ def custom_metric(predictions, targets):
     return metric_value
 ```
 
-## 🚀 Performance Tips
+## Performance Tips
 
 1. **GPU Usage**: Ensure CUDA is available for faster training
 2. **Batch Size**: Adjust based on available memory
 3. **Data Loading**: Use multiple workers for faster data loading
 4. **Mixed Precision**: Consider using automatic mixed precision for efficiency
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -257,11 +254,11 @@ import torch
 torch.autograd.set_detect_anomaly(True)
 ```
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -269,14 +266,14 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 4. Push to the branch
 5. Create a Pull Request
 
-## 📞 Support
+## Support
 
 For questions and support:
 - Open an issue on GitHub
 - Check the troubleshooting section
 - Review the tutorial documentation
 
-## 🏆 Acknowledgments
+## Acknowledgments
 
 - PyTorch team for the excellent deep learning framework
 - Research papers that inspired the architecture
@@ -284,4 +281,4 @@ For questions and support:
 
 ---
 
-**Happy Recommending! 🎯**
+**Advanced Image Recommender System**
